@@ -29,8 +29,6 @@ function create(event: RegistryItemEvent, cfg: ItemConfig): ItemCreationResult {
         });
     }
 
-	ITEM.tooltip('§aa§bb§cc§dd§ff§gg§hh§ii§jj§kk§ll§mm§nn§oo§pp§qq§rr§ss§tt§uu§vv§ww§xx§yy§zz');
-
 	applyPropertiesArray({
 		item: ITEM,
 		cfg: cfg,

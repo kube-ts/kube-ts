@@ -1,7 +1,7 @@
 /**
  * Item config properties.
  */
-enum ConfigFields {
+enum FieldsConfig {
 	tier = 'tier',
 	attackDamageBaseline = 'attackDamageBaseline',
 	speedBaseline = 'speedBaseline',
@@ -22,16 +22,16 @@ enum KubeJsSetter {
 	speed = 'speed'
 }
 
-const AVAILABLE_SETTERS: object = {
-	[KubeJsSetter.tier]: [ConfigFields.tier],
-	[KubeJsSetter.attackDamageBaseline]: [ConfigFields.attackDamageBaseline],
-	[KubeJsSetter.attackDamageBonus]: [ConfigFields.attackDamageBonus],
-	[KubeJsSetter.speedBaseline]: [ConfigFields.speedBaseline],
-	[KubeJsSetter.speed]: [ConfigFields.speed]
+const USED_SETTERS: object = {
+	[KubeJsSetter.tier]: [FieldsConfig.tier],
+	[KubeJsSetter.attackDamageBaseline]: [FieldsConfig.attackDamageBaseline],
+	[KubeJsSetter.attackDamageBonus]: [FieldsConfig.attackDamageBonus],
+	[KubeJsSetter.speedBaseline]: [FieldsConfig.speedBaseline],
+	[KubeJsSetter.speed]: [FieldsConfig.speed]
 };
 
 export {
-	ConfigFields,
+	FieldsConfig,
 	KubeJsSetter,
-	AVAILABLE_SETTERS
+    USED_SETTERS	
 };

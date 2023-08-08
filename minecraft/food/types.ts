@@ -1,7 +1,7 @@
-import { TConfig as ItemConfig, TCreationResult as ItemCreationResult } from '../Item';
-import { ConfigFields, KubeJsSetter } from './config';
-import { ConfigFields as BConfigFields, KubeJsSetter as BKubeJsSetter } from './builderConfig';
-import { ConfigFields as EConfigFields } from './effectConfig';
+import { TConfig as ItemConfig, TCreationResult as ItemCreationResult } from '../item.lib';
+import { FieldsConfig, KubeJsSetter } from '../configs/food/food';
+import { FieldsConfig as BConfigFields, KubeJsSetter as BKubeJsSetter } from '../configs/food/builder';
+import { FieldsConfig as EConfigFields } from '../configs/food/effect';
 
 interface FoodBuilder {
 	[BKubeJsSetter.hunger](n: number): FoodCreationResult;
@@ -86,7 +86,7 @@ interface FoodConfig extends ItemConfig {
 	 * Set the food properties of the item.
 	 * @supported true
 	 */
-	[ConfigFields.food]: FoodSettings;
+	[FieldsConfig.food]: FoodSettings;
 }
 
 interface FoodCreationResult extends ItemCreationResult {

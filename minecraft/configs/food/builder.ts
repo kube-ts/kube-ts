@@ -1,7 +1,7 @@
 /**
  * Food settings object config.
  */
-enum ConfigFields {
+enum FieldsConfig {
 	hunger = 'hunger',
 	saturation = 'saturation',
 	meat = 'meat',
@@ -24,17 +24,17 @@ enum KubeJsSetter {
 	removeEffect = 'removeEffect'
 }
 
-const SETTERS: object = {
-	[KubeJsSetter.hunger]: [ConfigFields.hunger],
-	[KubeJsSetter.saturation]: [ConfigFields.saturation],
-	[KubeJsSetter.meat]: [ConfigFields.meat],
-	[KubeJsSetter.alwaysEdible]: [ConfigFields.alwaysEdible],
-	[KubeJsSetter.fastToEat]: [ConfigFields.fastToEat],
-	[KubeJsSetter.removeEffect]: [ConfigFields.removeEffect]
+const USED_SETTERS: object = {
+	[KubeJsSetter.hunger]: [FieldsConfig.hunger],
+	[KubeJsSetter.saturation]: [FieldsConfig.saturation],
+	[KubeJsSetter.meat]: [FieldsConfig.meat],
+	[KubeJsSetter.alwaysEdible]: [FieldsConfig.alwaysEdible],
+	[KubeJsSetter.fastToEat]: [FieldsConfig.fastToEat],
+	[KubeJsSetter.removeEffect]: [FieldsConfig.removeEffect]
 };
 
 export {
-	ConfigFields,
+	FieldsConfig,
 	KubeJsSetter,
-	SETTERS
+	USED_SETTERS
 };

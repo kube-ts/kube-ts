@@ -1,7 +1,7 @@
 /**
  * Effect settings object config.
  */
-enum ConfigFields {
+enum FieldsConfig {
 	mobEffectId = 'mobEffectId',
 	duration = 'duration',
 	amplifier = 'amplifier',
@@ -9,5 +9,5 @@ enum ConfigFields {
 }
 
 export {
-	ConfigFields
+	FieldsConfig
 };

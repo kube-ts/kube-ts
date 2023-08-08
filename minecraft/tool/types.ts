@@ -1,5 +1,5 @@
-import { TConfig as ItemConfig, TCreationResult as ItemCreationResult } from '../Item';
-import { ConfigFields, KubeJsSetter } from './config';
+import { TConfig as ItemConfig, TCreationResult as ItemCreationResult } from '../item.lib';
+import { FieldsConfig, KubeJsSetter } from '../configs/tool';
 
 enum Tier {
 	wooden = 'wood',
@@ -19,16 +19,16 @@ enum Type {
 }
 
 interface ToolConfig extends ItemConfig {
-	[ConfigFields.tier]: Tier;
-	[ConfigFields.type]: Type;
-	[ConfigFields.attackDamageBaseline]?: number;
-	[ConfigFields.attackDamageBonus]?: number;
-	[ConfigFields.speedBaseline]?: number;
-	[ConfigFields.speed]?: number;
+	[FieldsConfig.tier]: Tier;
+	[FieldsConfig.type]: Type;
+	[FieldsConfig.attackDamageBaseline]?: number;
+	[FieldsConfig.attackDamageBonus]?: number;
+	[FieldsConfig.speedBaseline]?: number;
+	[FieldsConfig.speed]?: number;
 }
 
 interface ToolCreationResult extends ItemCreationResult {
-	[KubeJsSetter.tier](t: Tiers): ToolCreationResult;
+	[KubeJsSetter.tier](t: Tier): ToolCreationResult;
 	[KubeJsSetter.speed](n?: number): ToolCreationResult;
 	unstackable(): ToolCreationResult;
 }

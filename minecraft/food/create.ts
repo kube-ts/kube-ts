@@ -1,9 +1,9 @@
-import { create as createItem } from '../Item';
+import { create as createItem } from '../item.lib';
 import { applyPropertiesArray, applyProperty } from '../Utils';
 import { RegistryItemEvent } from '../Types';
 import { FoodConfig, FoodCreationResult, FoodBuilder } from './types';
-import { SETTERS } from './builderConfig';
-import { ConfigFields as EConfigFields } from './effectConfig';
+import { USED_SETTERS } from '../configs/food/builder';
+import { FieldsConfig as EConfigFields } from '../configs/food/effect';
 
 /**
  * Create Food.
@@ -30,7 +30,7 @@ function create(event: RegistryItemEvent, cfg: FoodConfig): FoodCreationResult {
 			applyPropertiesArray({
 				item: f,
 				cfg: cfg.food,
-				setters: SETTERS
+				setters: USED_SETTERS
 			});
 		}
 	});

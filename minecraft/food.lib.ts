@@ -5,4 +5,4 @@ export {
 	create,
 	FoodConfig as TConfig,
 	FoodCreationResult as TCreationResult
-}
+};

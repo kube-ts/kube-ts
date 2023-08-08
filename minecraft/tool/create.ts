@@ -1,9 +1,9 @@
-import { create as createItem } from '../Item';
+import { create as createItem } from '../item.lib';
 import { RegistryItemEvent } from '../Types';
 import { applyPropertiesArray } from '../Utils';
 
 import { ToolConfig, ToolCreationResult } from './types';
-import { AVAILABLE_SETTERS } from './config';
+import { USED_SETTERS } from '../configs/tool';
 
 /**
  * Create Tool.
@@ -18,7 +18,7 @@ function create(event: RegistryItemEvent, cfg: ToolConfig): ToolCreationResult {
 	applyPropertiesArray({
 		item: TOOL,
 		cfg: cfg,
-		setters: AVAILABLE_SETTERS
+		setters: USED_SETTERS
 	});
 
 	return TOOL;
